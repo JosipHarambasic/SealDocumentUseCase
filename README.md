@@ -31,7 +31,7 @@ after the code completed, navigate with your terminal to the target folder and t
 #### Using the IDE to run the code
 in the class main we encode the PDF to base64 there you can put the path of your PDF instead the args[0] to run it without jar file
 
-4. now you should see as a response something like this `{  "document_id" : "599a47e1-1c4a-d1b3-c437-9efe311c"}` you can now use the ID to do further steps with the API
+4. now you should see as a response something like this `{  "document_id" : "599a47e1-1c4a-d1b3-c437-9efe311c"}`, you can use the ID to do further steps with the API
 
 
 

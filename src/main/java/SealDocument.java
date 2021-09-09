@@ -30,7 +30,7 @@ public class SealDocument {
         connection.setDoOutput(true);
 
         /**
-         * now the connection is made so we can send our JSON request body with it's content
+         * now the connection is made, so we can send our JSON request body with its content
          */
         try(OutputStream os = connection.getOutputStream()){
             byte[] input = documentAsJSON.getBytes(StandardCharsets.UTF_8);

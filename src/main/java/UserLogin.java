@@ -7,9 +7,15 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 
-public class Token {
+public class UserLogin {
     StringBuilder Token;
+    String username;
+    String api_key;
 
+    public UserLogin(String username, String api_key){
+        this.username = username;
+        this.api_key = api_key;
+    }
     /**
      * we create a token, this is necessary to continue and use the API calls
      */
@@ -41,7 +47,7 @@ public class Token {
          * create the request body
          * here we need only the username and the api-key to make a POST request and to receive a valid token for the Skribble API
          */
-        String jsonInputString = "{\"username\": \"api_demo_skribble_d901_0\", \"api-key\":\"118d6d49-1415-4f8e-bd16-2a0ef03beaf9\"}";
+        String jsonInputString = "{\"username\": \"" + username +"\", \"api-key\":\"" + api_key + "\"}";
         try(OutputStream os = connection.getOutputStream()){
             byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
             os.write(input,0, input.length);

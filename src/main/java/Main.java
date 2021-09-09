@@ -10,8 +10,8 @@ public class Main {
         /**
          * first we need a token that is created and added as Authentication for the Skribble API
          */
-        Token t = new Token();
-        StringBuilder token = t.createToken();
+        UserLogin user = new UserLogin("api_demo_skribble_d901_0", "118d6d49-1415-4f8e-bd16-2a0ef03beaf9");
+        StringBuilder token = user.createToken();
 
         /**
          * We need the document path to encode it to base 64 and add it as content in the API request
